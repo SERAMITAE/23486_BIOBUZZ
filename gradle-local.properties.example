@@ -1,0 +1,7 @@
+# Copy this file to gradle-local.properties, then fill in a newly created GitHub
+# personal access token that can read packages in Matteo0205/seramitaelib.
+# Keep gradle-local.properties private; it is excluded from Git.
+githubPackagesUser=YOUR_GITHUB_USERNAME
+githubPackagesToken=YOUR_GITHUB_PACKAGES_READ_TOKEN
+githubPackagesUser=YOUR_GITHUB_USERNAME
+githubPackagesToken=YOUR_GITHUB_PERSONAL_ACCESS_TOKEN

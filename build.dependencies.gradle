@@ -1,7 +1,29 @@
 repositories {
+    def localProperties = new Properties()
+    def localPropertiesFile = rootProject.file('gradle-local.properties')
+    if (localPropertiesFile.exists()) {
+        localPropertiesFile.withInputStream { localProperties.load(it) }
+    }
+
+    google()
     mavenCentral()
-    maven { url 'https://repo.dairy.foundation/releases/'}
-    google() // Needed for androidx
+
+    maven {
+        url 'https://repo.dairy.foundation/releases/'
+    }
+
+    maven {
+        url = uri("https://maven.pkg.github.com/Matteo0205/seramitaelib")
+
+        def packagesUser = localProperties.getProperty('githubPackagesUser')
+        def packagesToken = localProperties.getProperty('githubPackagesToken')
+        if (packagesUser && packagesToken) {
+            credentials {
+                username = packagesUser
+                password = packagesToken
+            }
+        }
+    }
 }
 
 dependencies {
@@ -15,7 +37,7 @@ dependencies {
     implementation 'org.firstinspires.ftc:FtcCommon:11.2.1'
     implementation 'org.firstinspires.ftc:Vision:11.2.1'
     implementation 'androidx.appcompat:appcompat:1.2.0'
-
+    implementation 'com.pedropathing.ivy:pedro:1.1.1'
     implementation 'com.pedropathing:revhub:3.0.0'
     implementation 'com.pedropathing:tuning:1.0.0'
 }
