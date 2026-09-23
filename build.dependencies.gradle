@@ -24,6 +24,7 @@ repositories {
             }
         }
     }
+    maven { url = 'https://maven.brott.dev/' }
 }
 
 dependencies {
@@ -40,4 +41,7 @@ dependencies {
     implementation 'com.pedropathing.ivy:pedro:1.1.1'
     implementation 'com.pedropathing:revhub:3.0.0'
     implementation 'com.pedropathing:tuning:1.0.0'
+    implementation('com.acmerobotics.dashboard:dashboard:0.6.0') {
+        exclude group: 'org.firstinspires.ftc'
+    }
 }

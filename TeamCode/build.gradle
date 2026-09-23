@@ -19,6 +19,11 @@ apply from: '../build.dependencies.gradle'
 android {
     namespace = 'org.firstinspires.ftc.teamcode'
 
+    compileSdk 35
+    defaultConfig {
+        minSdk 24
+    }
+
     packagingOptions {
         jniLibs.useLegacyPackaging true
     }
@@ -26,5 +31,5 @@ android {
 
 dependencies {
     implementation project(':FtcRobotController')
-    implementation 'org.seramitae:seramitaelib:0.1.2'
+    implementation 'org.seramitae:seramitaelib:0.2.3'
 }
