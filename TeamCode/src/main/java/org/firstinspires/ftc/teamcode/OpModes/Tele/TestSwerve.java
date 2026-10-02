@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.OpModes.Tele;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-import org.firstinspires.ftc.teamcode.Systems.DiffySwerve;
+import org.firstinspires.ftc.teamcode.Systems.Swerve.DiffySwerve;
 
 
 @TeleOp(name = "Diff Swerve Test", group = "Test")

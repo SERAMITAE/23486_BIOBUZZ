@@ -1,29 +1,12 @@
 repositories {
-    def localProperties = new Properties()
-    def localPropertiesFile = rootProject.file('gradle-local.properties')
-    if (localPropertiesFile.exists()) {
-        localPropertiesFile.withInputStream { localProperties.load(it) }
-    }
-
     google()
     mavenCentral()
+    maven { url 'https://jitpack.io' }
 
     maven {
         url 'https://repo.dairy.foundation/releases/'
     }
 
-    maven {
-        url = uri("https://maven.pkg.github.com/Matteo0205/seramitaelib")
-
-        def packagesUser = localProperties.getProperty('githubPackagesUser')
-        def packagesToken = localProperties.getProperty('githubPackagesToken')
-        if (packagesUser && packagesToken) {
-            credentials {
-                username = packagesUser
-                password = packagesToken
-            }
-        }
-    }
     maven { url = 'https://maven.brott.dev/' }
 }
 

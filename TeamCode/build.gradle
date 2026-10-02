@@ -31,5 +31,5 @@ android {
 
 dependencies {
     implementation project(':FtcRobotController')
-    implementation 'org.seramitae:seramitaelib:0.2.3'
+    implementation 'com.github.Matteo0205:seramitaelib:0.3.0'
 }
