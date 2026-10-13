@@ -28,7 +28,9 @@ public class Intake {
     {
         intake.setPower(OUTPOWER);
     }
-    public void getDetection() {p.getState();}
+    public boolean getDetection() {
+        return p.getState();
+    }
     public void Stop()
     {
         intake.setPower(0);

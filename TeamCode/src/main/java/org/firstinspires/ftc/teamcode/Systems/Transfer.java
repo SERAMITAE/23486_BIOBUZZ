@@ -18,7 +18,7 @@ public class Transfer {
         m.brake();
     }
 
-    public void spinIn()
+    public void SpinIn()
     {
         m.setPower(INPOWER);
     }
